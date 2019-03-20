@@ -98,11 +98,9 @@ puts <<-JS
     }
   }
 
-  customElements.define('bytesize-icon', BytesizeIcon);
+  BytesizeIcon.setDefaultAttributes = setDefaultAttributes;
 
-  BytesizeIcon.setDefaultAttributes = function (attributes) {
-    Object.assign(defaultAttributes, attributes);
-  };
+  customElements.define('bytesize-icon', BytesizeIcon);
 
   window.BytesizeIconDefaults = BytesizeIconDefaults;
   window.BytesizeIcon = BytesizeIcon;
